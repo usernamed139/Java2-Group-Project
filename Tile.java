@@ -2,15 +2,13 @@ public class Tile {
   public int x = 0;
   public int y = 0;
   
-  String toString() {
+  public String toString() {
     return " ";
   }
 
-  Color toColor() {
-    return Color.WHITE;
-  }
+  // TODO: Add color method (returning white)
 
-  void tick() {
+  public void tick() {
     
   }
 }
