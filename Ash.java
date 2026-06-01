@@ -5,6 +5,7 @@ public class Ash extends Tile{
     public String toString(){
         return ".";
     }
+
     @Override
     public Color toColor(){
         return Color.GRAY;
