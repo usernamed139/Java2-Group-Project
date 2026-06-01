@@ -1,4 +1,4 @@
-import java.awt.*;
+import java.awt.Color;
 
 public class Ash extends Tile{
     @Override
@@ -7,7 +7,7 @@ public class Ash extends Tile{
     }
 
     @Override
-    public Color toColor(){
+    public Color getColor(){
         return Color.GRAY;
     }
 }

@@ -1,4 +1,4 @@
-import java.awt.*;
+import java.awt.Color;
 
 public class Fire extends Tile {
     public String toString() {

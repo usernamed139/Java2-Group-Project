@@ -1,4 +1,4 @@
-import java.awt.color.*;
+import java.awt.Color;
 
 public class Tile {
   public int x = 0;
@@ -12,8 +12,7 @@ public class Tile {
     return " ";
   }
 
-  // TODO: doesn't recognize "Color"?
-  public Color toColor() {
+  public Color getColor() {
     Color c = Color.WHITE;
     return c;
   }

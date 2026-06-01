@@ -1,5 +1,10 @@
-import java.awt.*;
+import java.awt.Color;
 
 public class DryWood extends Wood {
-    // TODO
+    @Override
+    public Color getColor(){
+        // Light brown
+        Color c = new Color(220, 195, 159);
+        return c;
+    }
 }
