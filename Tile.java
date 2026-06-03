@@ -8,6 +8,10 @@ public class Tile {
 
   }
 
+  public boolean isBurnable(){
+    return false; //default
+  }
+
   public String toString() {
     return " ";
   }

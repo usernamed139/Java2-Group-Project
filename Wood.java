@@ -5,9 +5,13 @@ public class Wood extends Tile {
         // TODO
     }
 
+    public boolean isBurnable(){
+        return true;
+    }
+
     @Override
     public String toString(){
-        return "Y";
+        return "W";
     }
 
     @Override
