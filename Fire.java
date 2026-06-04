@@ -4,7 +4,7 @@ public class Fire extends Tile {
     private int lifeTime;
 
     public Fire(){
-        this.lifeTime = 3;
+        this.lifeTime = 5;
     }
 
     public String toString() {

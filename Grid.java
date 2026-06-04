@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Grid {
     private Tile[][] map;
     private int rows;
@@ -35,12 +37,27 @@ public class Grid {
     //update the grid by one tick
     public void update(){
         Tile[][] next = new Tile[rows][cols];
+        Random rand = new Random();
         for (int r = 0; r < rows; r++){
             for (int c = 0; c < cols; c++){
                 next[r][c] = map[r][c];
+
                 if (map[r][c].isBurnable()){
                     if (hasFireAround(r, c)){
-                        next[r][c] = new Fire();
+                        if (rand.nextInt(100) < 80){
+                            next[r][c] = new Fire();
+                        }
+                        else{
+                            next[r][c] = new SafeWood();
+                        }
+                    }
+                }
+
+                if (map[r][c] instanceof Fire) {
+                    Fire fire = (Fire) map[r][c];
+                    fire.tick();
+                    if (fire.isExtinguished()) {
+                        next[r][c] = new Ash();
                     }
                 }
             }
@@ -63,6 +80,10 @@ public class Grid {
             return true;
         }
         return false;
+    }
+
+    public Tile getTile(int r, int c){
+        return map[r][c];
     }
 
     public int getRows(){
