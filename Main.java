@@ -16,19 +16,7 @@ public class Main {
         System.out.println("Wood toString (" + wood.toString() + ")");
         System.out.println("DryWood toString (" + dryWood.toString() + ")");
     }
-    /*  public static void main(String[] args) {
-        System.out.println("Welcome to Fire Simulation");
-
-        classToStrings();
-
-        // TODO: GUI that asks user for input, ie, size of board
-        // and composition of DryWood/Wood
-
-        Grid simulationGrid = new Grid(10, 10);
-        SimGUI simulationGUI = new SimGUI(simulationGrid);
-        simulationGrid.display();
-    }
-*/
+    
     public static void main(String[] args) {
         JFrame frame = new JFrame("Fire Simulation");
         frame.add(new GUI());
