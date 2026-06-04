@@ -1,7 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Welcome to Fire Simulation");
-
+    public static void classToStrings() {
         Tile tile = new Tile();
         Tile ash = new Ash();
         Tile water = new Water();
@@ -14,9 +12,19 @@ public class Main {
         System.out.println("Water toString (" + water.toString() + ")");
         System.out.println("Fire toString (" + fire.toString() + ")");
         System.out.println("Wood toString (" + wood.toString() + ")");
-        System.out.println("dryWood toString (" + dryWood.toString() + ")");
+        System.out.println("DryWood toString (" + dryWood.toString() + ")");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Fire Simulation");
+
+        classToStrings();
+
+        // TODO: GUI that asks user for input, ie, size of board
+        // and composition of DryWood/Wood
 
         Grid simulationGrid = new Grid(10, 10);
+        SimGUI simulationGUI = new SimGUI(simulationGrid);
         simulationGrid.display();
     }
 }

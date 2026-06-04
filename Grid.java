@@ -1,5 +1,5 @@
 public class Grid {
-    private Tile[][] map;
+    public Tile[][] map;
     private int rows;
     private int cols;
 
