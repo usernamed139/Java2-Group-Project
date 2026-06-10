@@ -17,7 +17,14 @@ public class Grid {
     private void setupGrid(){
         for (int r = 0; r < rows; r++){
             for (int c = 0; c < cols; c++){
-                map[r][c] = new Wood();
+                double randomChoice = Math.random();
+                if (randomChoice < 0.50) {
+                    map[r][c] = new Wood();
+                } else if (randomChoice < 0.98) {
+                    map[r][c] = new DryWood();
+                } else {
+                    map[r][c] = new Water();
+                }
             }
         }
         //create a fire in the middle
@@ -44,10 +51,10 @@ public class Grid {
 
                 if (map[r][c].isBurnable()){
                     if (hasFireAround(r, c)){
-                        if (rand.nextInt(100) < 80){
+                        if (rand.nextInt(100) < map[r][c].getBurnChance()){
                             next[r][c] = new Fire();
                         }
-                        else{
+                        else {
                             next[r][c] = new SafeWood();
                         }
                     }

@@ -22,18 +22,9 @@ public class GUI extends JPanel{
         for (int r = 0; r < grid.getRows(); r++) {
             for (int c = 0; c < grid.getCols(); c++) {
                 Tile t = grid.getTile(r, c);
-                if (t instanceof Fire) {
-                    g.setColor(Color.RED);
-                }
-                else if (t instanceof Ash) {
-                    g.setColor(Color.GRAY);
-                }
-                else if (t.isBurnable()) {
-                    g.setColor(new Color(139, 69, 19));
-                }
-                else {
-                    g.setColor(new Color(139, 69, 19));
-                }
+
+                g.setColor(t.getColor());
+
                 g.fillRect(c * 20, r * 20, 20, 20);
             }
         }

@@ -1,10 +1,6 @@
 import java.awt.Color;
 
 public class Wood extends Tile {
-    public void tryBurn() {
-        // TODO
-    }
-
     public boolean isBurnable(){
         return true;
     }
@@ -17,7 +13,12 @@ public class Wood extends Tile {
     @Override
     public Color getColor(){
         // Brown
-        Color c = new Color(127, 78, 31);
+        Color c = new Color(145, 100, 62);
         return c;
+    }
+
+    @Override 
+    public int getBurnChance() {
+        return 50;
     }
 }

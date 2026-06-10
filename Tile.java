@@ -24,4 +24,8 @@ public class Tile {
   public void tick() {
     
   }
+
+  public int getBurnChance() {
+    return 0;
+  }
 }
