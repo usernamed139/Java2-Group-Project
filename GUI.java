@@ -4,11 +4,11 @@ import java.awt.event.*;
 
 public class GUI extends JPanel{
     private Grid grid;
-
+    private Timer timer;
     public GUI() {
-        grid = new Grid(25, 25);
+        grid = new Grid(40, 85);
 
-        Timer timer = new Timer(200, new ActionListener() {
+        timer = new Timer(250, new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 grid.update();
                 repaint();
@@ -28,6 +28,14 @@ public class GUI extends JPanel{
                 g.fillRect(c * 20, r * 20, 20, 20);
             }
         }
+    }
+
+    public void stopTimer() {
+        timer.stop();
+    }
+
+    public void startTimer() {
+        timer.start();
     }
 }
 
